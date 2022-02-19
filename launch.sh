@@ -42,7 +42,6 @@ if ! [[ -f serverstarter-0.2.41.jar ]]; then
 		echo "Neither wget or curl were found on your system. Please install one and try again"
 		exit 1
 	fi
-	mv /server.properties /data/server.properties
 	mv /server-setup-config.yaml /data/server-setup-config.yaml
 fi
 
