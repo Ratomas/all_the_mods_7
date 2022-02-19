@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM openjdk:8u312-jdk-buster
+FROM openjdk:17
 
 LABEL version="0.2.41"
 
@@ -11,6 +11,10 @@ RUN apt-get update && apt-get install -y curl unzip dos2unix && \
 COPY launch.sh /launch.sh
 RUN dos2unix /launch.sh
 RUN chmod +x /launch.sh
+
+COPY server.properties /server.properties
+RUN dos2unix /server.properties
+
 
 COPY server-setup-config.yaml /server-setup-config.yaml
 RUN dos2unix /server-setup-config.yaml
