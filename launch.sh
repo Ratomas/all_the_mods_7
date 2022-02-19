@@ -57,7 +57,7 @@ if [[ -n "$LEVELTYPE" ]]; then
 fi
 if [[ -n "$EULA" ]]; then
     sed -i "/eula\s*=/ c eula=$EULA" setup/eula.txt
-
+fi
 if [[ -n "$OPS" ]]; then
     echo $OPS | awk -v RS=, '{print}' >> ops.txt
 fi
