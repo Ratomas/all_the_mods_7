@@ -39,5 +39,5 @@ example:
 `OPS="OpPlayer1,OpPlayer2"`
 
 ## Source
-Github: https://github.com/Ratomas/techopolis
-Docker: https://hub.docker.com/repository/docker/ratomas/techopolis
+Github: https://github.com/Ratomas/all_the_mods_7
+Docker: https://hub.docker.com/r/ratomas/all_the_mods_7
