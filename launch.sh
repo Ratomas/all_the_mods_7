@@ -44,7 +44,6 @@ if ! [[ -f serverstarter-0.2.41.jar ]]; then
 	fi
 	mv /server.properties /data/server.properties
 	mv /server-setup-config.yaml /data/server-setup-config.yaml
-	cp /data/eula.txt /data/setup/eula.txt
 fi
 
 if [[ -n "$MOTD" ]]; then
