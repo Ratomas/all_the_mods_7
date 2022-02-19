@@ -87,7 +87,7 @@ install:
       - 574123
 
   # The base path where the server should be installed to, ~ for current path
-  baseInstallPath: /
+  baseInstallPath: ~
 
   # a list of files which are supposed to be ignored when installing it from the client files
   # this can either use regex or glob {default glob: https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileSystem.html#getPathMatcher-java.lang.String-}
