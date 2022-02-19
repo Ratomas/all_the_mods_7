@@ -56,6 +56,8 @@ fi
 if [[ -n "$LEVELTYPE" ]]; then
     sed -i "/level-type\s*=/ c level-type=$LEVELTYPE" server.properties
 fi
+if [[ -n "$EULA" ]]; then
+    sed -i "/eula\s*=/ c motd=$EULA" setup/eula.txt
 
 if [[ -n "$OPS" ]]; then
     echo $OPS | awk -v RS=, '{print}' >> ops.txt
