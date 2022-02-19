@@ -62,7 +62,7 @@ fi
 curl -o log4j2_112-116.xml https://launcher.mojang.com/v1/objects/02937d122c86ce73319ef9975b58896fc1b491d1/log4j2_112-116.xml
 
 
-java $JAVA_FLAGS $JVM_OPTS -Dlog4j.configurationFile=log4j2_112-116.xml -jar serverstarter-2.2.0.jar
+java $JAVA_FLAGS $JVM_OPTS -Dlog4j.configurationFile=log4j2_112-116.xml -jar serverstarter-0.2.41.jar
 if [[ $DO_RAMDISK -eq 1 ]]; then
     sudo umount $SAVE_DIR
     rm -rf $SAVE_DIR
