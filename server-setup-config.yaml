@@ -42,7 +42,7 @@ install:
 
   # Link to where the file where the modpack can be distributed
   # This supports loading from local files as well for most pack types if there is file://{PathToFile} in the beginning
-  modpackUrl: https://media.forgecdn.net/files/3645/602/All+the+Mods+7-0.2.41.zip
+  modpackUrl: https://media.forgecdn.net/files/3666/955/All+the+Mods+7-0.2.45.zip
 
   # This is used to specify in which format the modpack is distributed, the server launcher has to handle each individually if their format differs
   # current supported formats:
@@ -87,7 +87,7 @@ install:
       - 574123
 
   # The base path where the server should be installed to, ~ for current path
-  baseInstallPath: ~
+  baseInstallPath: setup/
 
   # a list of files which are supposed to be ignored when installing it from the client files
   # this can either use regex or glob {default glob: https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileSystem.html#getPathMatcher-java.lang.String-}
