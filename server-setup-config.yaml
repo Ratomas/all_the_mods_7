@@ -7,14 +7,14 @@ modpack:
   name: All the Mods 7
 
   # Description
-  description: ATM7 NOW ON 1.18.1 
+  description: ATM7 NOW ON 1.18.2
 
 
 
 # settings regarding the installation of the modpack
 install:
   # version of minecraft, needs the exact version
-  mcVersion: 1.18.1
+  mcVersion: 1.18.2
 
   # exact version of forge or fabric that is supposed to be used
   # if this value is a null value so ( ~, null, or "" ) then the version from the mod pack is going to be used
@@ -42,7 +42,7 @@ install:
 
   # Link to where the file where the modpack can be distributed
   # This supports loading from local files as well for most pack types if there is file://{PathToFile} in the beginning
-  modpackUrl: https://media.forgecdn.net/files/3666/955/All+the+Mods+7-0.2.45.zip
+  modpackUrl: https://media.forgecdn.net/files/3737/843/All+the+Mods+7-0.3.3.zip
 
   # This is used to specify in which format the modpack is distributed, the server launcher has to handle each individually if their format differs
   # current supported formats:
