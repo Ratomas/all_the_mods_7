@@ -27,17 +27,17 @@ if [[ $(cat server-setup-config.yaml | grep 'ramDisk:' | awk 'BEGIN {FS=":"}{pri
 fi
 
 # check for serverstarter jar
-if ! [[ -f serverstarter-0.3.4.jar ]]; then
+if ! [[ -f serverstarter-0.3.18.jar ]]; then
 	rm -fr config defaultconfigs global_data_packs global_resource_packs mods packmenu serverstarter-*.jar server.properties server-setup-config.yaml
 	# download missing serverstarter jar
 	URL="https://github.com/BloodyMods/ServerStarter/releases/download/v2.2.0/serverstarter-2.2.0.jar"
 
 	if command -v wget &> /dev/null; then
 		echo "DEBUG: (wget) Downloading ${URL}"
-		wget -O serverstarter-0.3.4.jar "${URL}"
+		wget -O serverstarter-0.3.18.jar "${URL}"
 	elif command -v curl &> /dev/null; then
 		echo "DEBUG: (curl) Downloading ${URL}"
-		curl -o serverstarter-0.3.4.jar "${URL}"
+		curl -o serverstarter-0.3.18.jar "${URL}"
 	else
 		echo "Neither wget or curl were found on your system. Please install one and try again"
 		exit 1
@@ -63,7 +63,7 @@ fi
 curl -o log4j2_112-116.xml https://launcher.mojang.com/v1/objects/02937d122c86ce73319ef9975b58896fc1b491d1/log4j2_112-116.xml
 
 
-java $JAVA_FLAGS $JVM_OPTS -Dlog4j.configurationFile=log4j2_112-116.xml -jar serverstarter-0.3.4.jar
+java $JAVA_FLAGS $JVM_OPTS -Dlog4j.configurationFile=log4j2_112-116.xml -jar serverstarter-0.3.18.jar
 if [[ $DO_RAMDISK -eq 1 ]]; then
     sudo umount $SAVE_DIR
     rm -rf $SAVE_DIR
