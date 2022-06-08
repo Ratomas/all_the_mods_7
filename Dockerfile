@@ -2,7 +2,7 @@
 
 FROM openjdk:17-jdk-buster
 
-LABEL version="0.4.0"
+LABEL version="0.4.9"
 
 RUN apt-get update && apt-get install -y curl unzip dos2unix && \
  addgroup minecraft && \
@@ -12,12 +12,7 @@ COPY launch.sh /launch.sh
 RUN dos2unix /launch.sh
 RUN chmod +x /launch.sh
 
-COPY server.properties /server.properties
-RUN dos2unix /server.properties
-
-
-COPY server-setup-config.yaml /server-setup-config.yaml
-RUN dos2unix /server-setup-config.yaml
+COPY server /server
 
 USER minecraft
 
@@ -28,7 +23,7 @@ EXPOSE 25565/tcp
 
 CMD ["/launch.sh"]
 
-ENV MOTD "All the Mods 7 version 0.4.0 Server Powered by Docker"
+ENV MOTD "All the Mods 7 version 0.4.9 Server Powered by Docker"
 ENV LEVEL world
 ENV LEVELTYPE ""
 ENV JVM_OPTS "-Xms2048m -Xmx4096m"
