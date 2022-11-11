@@ -33,10 +33,23 @@ onEvent('jei.hide.items', e => {
     'immersiveengineering:stick_iron',
     'immersiveengineering:stick_steel',
     'immersiveengineering:stick_aluminum',
+    'industrialforegoing:iron_gear',
+    'industrialforegoing:gold_gear',
+    'industrialforegoing:diamond_gear',
     'silentgear:iron_rod',
     'moreminecarts:chunkrodite',
     'moreminecarts:chunkrodite_block',
     'ftbic:silicon',
+    'twilightforest:uncrafting_table',
+    'mysticalagradditions:nitro_crystal_crux',
+    'createaddition:zinc_sheet',
+    'thermal:raw_tin',
+    'thermal:raw_lead',
+    'thermal:raw_silver',
+    'thermal:raw_nickel',
+    'ftbic:diamond_dust',
+    'thermal:diamond_dust',
+    'createaddition:diamond_grit'
   ])
 
   ftbicMetals.forEach(metal => {
@@ -66,14 +79,24 @@ onEvent('jei.hide.items', e => {
   hideMetal('mekanism', 'bronze', ['ingot', 'dust', 'nugget', 'block'])
   hideMetal('create', 'copper', ['ingot', 'ore', 'nugget', 'block'])
   hideMetal('create', 'zinc', ['ingot', 'ore', 'nugget', 'block'])
-  hideMetal('thermal', 'copper', ['ingot', 'ore', 'dust', 'nugget', 'block'])
-  hideMetal('thermal', 'tin', ['ingot', 'ore', 'dust', 'nugget', 'block'])
-  hideMetal('thermal', 'lead', ['ingot', 'ore', 'dust', 'nugget', 'block'])
-  hideMetal('thermal', 'silver', ['ingot', 'ore', 'dust', 'nugget', 'block'])
-  hideMetal('thermal', 'nickel', ['ingot', 'ore', 'dust', 'nugget', 'block'])
+  hideMetal('thermal', 'copper', ['dust', 'nugget', 'block', 'plate', 'gear'])
+  hideMetal('thermal', 'tin', ['ingot', 'ore', 'dust', 'nugget', 'block', 'plate', 'gear'])
+  hideMetal('thermal', 'lead', ['ingot', 'ore', 'dust', 'nugget', 'block', 'plate', 'gear'])
+  hideMetal('thermal', 'silver', ['ingot', 'ore', 'dust', 'nugget', 'block', 'plate', 'gear'])
+  hideMetal('thermal', 'nickel', ['ingot', 'ore', 'dust', 'nugget', 'block', 'plate', 'gear'])
+  hideMetal('thermal', 'signalum', ['ingot', 'ore', 'dust', 'nugget', 'block', 'plate', 'gear'])
+  hideMetal('thermal', 'enderium', ['ingot', 'ore', 'dust', 'nugget', 'block', 'plate', 'gear'])
+  hideMetal('thermal', 'electrum', ['ingot', 'ore', 'dust', 'nugget', 'block', 'plate', 'gear'])
+  hideMetal('thermal', 'constantan', ['ingot', 'ore', 'dust', 'nugget', 'block', 'plate', 'gear'])
+  hideMetal('thermal', 'bronze', ['ingot', 'ore', 'dust', 'nugget', 'block', 'plate', 'gear'])
+  hideMetal('thermal', 'lumium', ['ingot', 'ore', 'dust', 'nugget', 'block', 'plate', 'gear'])
+  hideMetal('thermal', 'invar', ['ingot', 'ore', 'dust', 'nugget', 'block', 'plate', 'gear'])
+
   //#endregion
   //#region hideStuff
   hideStuff('thermal', 'dust', ['iron', 'gold'])
+  hideStuff('thermal', 'gear', ['iron', 'gold'])
+  hideStuff('thermal', 'plate', ['iron', 'gold'])
   hideStuff('immersiveengineering', 'dust', ['iron', 'gold', 'sulfur', 'wood'])
   hideStuff('immersiveengineering', 'plate', ['iron', 'gold', 'copper', 'lead', 'silver', 'nickel', 'constantan', 'electrum', 'steel', 'uranium', 'aluminum'])
   hideStuff('mekanism', 'dust', ['lapis_lazuli', 'emerald', 'diamond', 'quartz', 'iron', 'gold'])
@@ -83,6 +106,7 @@ onEvent('jei.hide.items', e => {
   hideStuff('alltheores', 'clump', ['osmium', 'copper', 'tin', 'lead', 'uranium'])
   hideStuff('appliedenergistics2', 'dust', ['nether_quartz', 'ender', 'iron', 'gold'])
   hideStuff('create', 'sheet', ['iron', 'golden', 'copper', 'brass'])
+  hideStuff('createaddition', 'rod', ['iron', 'gold', 'copper', 'brass'])
   hideStuff('iceandfire', 'ore', ['silver', 'copper'])
   hideStuff('tmechworks', 'ore', ['aluminum', 'copper'])
   hideStuff('solarflux', 'sp', [6, 7, 8])

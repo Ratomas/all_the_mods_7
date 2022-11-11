@@ -18,10 +18,19 @@ onEvent('recipes', e => {
       }).id(`kubejs:cloche/${seed.replace(':', '/')}`)
   }
 
+  function insolator(output, input, id) {
+    e.custom({
+      "type": "thermal:insolator",
+      "ingredient": input,
+      "result": output
+    }).id(id)
+  }
+
   //#region FUNCTIONS
   function tier(types, time, soil, rCount) {
     types.forEach(type => {
       cloche(`mysticalagriculture:${type}_essence`, rCount, `mysticalagriculture:${type}_seeds`, soil, `mysticalagriculture:${type}_crop`, time);
+      insolator([Item.of(`mysticalagriculture:${type}_essence`),Item.of( `mysticalagriculture:${type}_seeds`)], Item.of(`mysticalagriculture:${type}_seeds`),`kubejs:thermal/insolator_${type}_seeds`)
     })
   }
 
@@ -101,7 +110,9 @@ onEvent('recipes', e => {
     'zinc',
     'zombie',
     'crimson_iron',
-    'azure_silver'
+    'azure_silver',
+    'sky_stone',
+    'amethyst_bronze'
   ], 2500, '#misctags:farmland/tier3', 2)
   //Tier 4 Crops
   tier([
@@ -125,6 +136,7 @@ onEvent('recipes', e => {
     'netherite',
     'wither_skeleton',
     'platinum',
+    'uraninite',
   ], 4000, '#misctags:farmland/tier5', 2)
   //Tier 6 Crops
   tier(['nether_star'], 4750, 'mysticalagradditions:nether_star_crux', 2)

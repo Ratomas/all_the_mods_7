@@ -1,7 +1,7 @@
 {
 	id: "100C477F4E63F20A"
 	group: "2B51AC12041E3F89"
-	order_index: 0
+	order_index: 1
 	filename: "create"
 	title: "Create"
 	icon: "create:large_cogwheel"
@@ -27,39 +27,11 @@
 				title: "Create"
 				icon: "create:wrench"
 			}]
-			rewards: [
-				{
-					id: "1E5B06A1884F3578"
-					type: "item"
-					item: "create:wrench"
-				}
-				{
-					id: "7D53F8A8D382F356"
-					type: "item"
-					item: {
-						id: "minecraft:player_head"
-						Count: 1b
-						tag: {
-							SkullOwner: {
-								Properties: {
-									textures: [{
-										Value: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcyOGRhNTIzNzBmZGJkZDkyZmMwYTg3Yjc2NTQxOTNlOTk3YWI3ZTI5MzNhYjYxZDM3ZTYzYWY5NjgxNzVjNCJ9fX0="
-									}]
-								}
-								Id: [I;
-									522720834
-									384190020
-									-1750486376
-									1760436187
-								]
-							}
-							display: {
-								Name: "{\"text\":\"LadyLexxie\"}"
-							}
-						}
-					}
-				}
-			]
+			rewards: [{
+				id: "1E5B06A1884F3578"
+				type: "item"
+				item: "create:wrench"
+			}]
 		}
 		{
 			x: 0.0d
@@ -164,11 +136,7 @@
 		{
 			x: 7.0d
 			y: 1.5d
-			description: [
-				"The &n&5Encased Fan&r has multiple uses. It can be used to generate a low amount of rotational energy if it's placed above a heat source, like Lava."
-				""
-				"It can also be used to pull/push items and entities if you spin it. The arrow will show you the direction it's facing and the rotation direction will determine if it pushes or pulls."
-			]
+			description: ["The &n&5Encased Fan&r is used to pull/push items and entities if you spin it. The arrow will show you the direction it's facing and the rotation direction will determine if it pushes or pulls."]
 			dependencies: ["17885C2DE986F1BD"]
 			id: "1E9B2D814F50A265"
 			tasks: [{
@@ -422,8 +390,8 @@
 			}]
 		}
 		{
-			x: 10.0d
-			y: 5.5d
+			x: 13.5d
+			y: 4.0d
 			description: [
 				"The &n&5Portable Interface&r works in pairs. You need to have one placed in the world and another one on a moving entity, like a Minecart."
 				""
@@ -474,8 +442,8 @@
 			}]
 		}
 		{
-			x: 10.5d
-			y: 4.5d
+			x: 12.0d
+			y: 4.0d
 			description: ["&n&5Casings&r are used as a crafting ingredient for most blocks."]
 			dependencies: ["1DA6B8B2DCC97809"]
 			id: "48EA6D9923E38B71"
@@ -495,35 +463,6 @@
 				id: "7FE62F264B4FA5DE"
 				type: "item"
 				item: "create:copper_casing"
-			}]
-		}
-		{
-			x: 13.5d
-			y: 5.0d
-			dependencies: ["7A43D2A2632BEA9B"]
-			id: "2244A1B11D7D6E11"
-			tasks: [{
-				id: "4BE77A9A3F878072"
-				type: "item"
-				item: "create:flywheel"
-			}]
-		}
-		{
-			x: 12.0d
-			y: 4.0d
-			description: [
-				"The &n&5Furnace Engine&r must be placed on a Furnace or Blast Furnace. The Blast Furnace will be more efficient."
-				""
-				"You must also connect it to a &n&5Flywheel&r. Place them one block apart to have them connect."
-				""
-				"The heat created by the furnaces will spin the Flywheel, creating rotational force with very high stress capacity."
-			]
-			dependencies: ["1DA6B8B2DCC97809"]
-			id: "7A43D2A2632BEA9B"
-			tasks: [{
-				id: "4E4C808C70D08946"
-				type: "item"
-				item: "create:furnace_engine"
 			}]
 		}
 		{
@@ -558,7 +497,7 @@
 		}
 		{
 			x: 9.0d
-			y: 2.5d
+			y: 3.5d
 			description: ["The &n&5Funnel&r can import or export items from connected inventories."]
 			dependencies: ["1DA6B8B2DCC97809"]
 			id: "495B0CC178B4CFA9"
@@ -581,8 +520,8 @@
 			}]
 		}
 		{
-			x: 9.0d
-			y: 4.0d
+			x: 10.5d
+			y: 5.0d
 			description: ["The &n&5Tunnels&r can be placed on belts and they will filter items that pass through them. You can link multiple tunnels by placing them next to each other."]
 			dependencies: ["1DA6B8B2DCC97809"]
 			id: "78656C89EEE80DB5"
@@ -832,6 +771,7 @@
 			}]
 		}
 		{
+			title: "Brass"
 			x: 10.5d
 			y: 3.0d
 			dependencies: ["5DC892BA79EB52EC"]
@@ -839,7 +779,15 @@
 			tasks: [{
 				id: "07896B715ED0E04F"
 				type: "item"
-				item: "create:brass_ingot"
+				title: "Any Brass Ingot"
+				icon: "create:brass_ingot"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "forge:ingots/brass"
+					}
+				}
 			}]
 		}
 		{

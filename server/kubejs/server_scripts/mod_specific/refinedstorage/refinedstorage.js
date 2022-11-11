@@ -5,14 +5,6 @@
     C: '#refinedstorage:crafter'
   })
   
-  //Universal Grid
-  e.shaped('universalgrid:creative_wireless_universal_grid', ['ABA', 'CBD', 'ABA'], {
-	A: 'minecraft:netherite_ingot',
-	B: 'refinedstorage:quartz_enriched_iron',
-	C: 'refinedstorageaddons:creative_wireless_crafting_grid',
-	D: 'universalgrid:wireless_universal_grid'
-  }).id('kubejs:universalgrid/creative_wireless_universal_grid')
-  
   //Cable Tiers
   function caTier(tier, corners, processor, cables) {
     Utils.listOf(['importer', 'exporter', 'constructor', 'destructor', 'disk_manipulator', 'requester']).forEach(caType => {
@@ -137,7 +129,7 @@
   })
   removeRecipeByID(e, [
     'extradisks:part/1024k_storage_part',
-    'refinedstorage:part/4096k_fluid_storage_part',
+    'refinedstorage:4096k_fluid_storage_part',
     'extradisks:part/4096k_storage_part',
     'extradisks:part/16384k_fluid_storage_part',
     'extradisks:part/16384k_storage_part',
